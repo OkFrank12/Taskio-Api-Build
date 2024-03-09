@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Verify EJS</title>
+    <style>
+      html {
+        width: 100%;
+      }
+      body {
+        width: 600px;
+        padding: 0 10px;
+        margin: 0 auto;
+        font-family: Arial;
+      }
+
+      p,
+      li {
+        line-height: 25px;
+      }
+      li {
+        font-weight: bold;
+      }
+      a {
+        text-decoration: none;
+        color: #72007c;
+      }
+
+      @media screen and (max-width: 650px) {
+        body {
+          width: 100%;
+          border: 0;
+          padding: 0;
+        }
+        p,
+        li,
+        a {
+          font-size: 14px;
+          width: 90%;
+          margin-left: 3px;
+          line-height: normal;
+        }
+
+        h1 {
+          margin-left: 3px;
+        }
+
+        img {
+          margin-left: 3px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Dear <%= userName %>,</h1>
+    <p>
+      Welcome to Taskio - your ultimate task management platform designed to
+      help you stay organized and efficient!
+    </p>
+    <p>
+      To complete your registration and unlock the full potential of Taskio, we
+      need to verify your email address. Simply click on the link below to
+      verify your account:
+    </p>
+    <a href="<%= verifyLink %>">Verification Link</a>
+    <p>
+      By verifying your email, you'll gain access to all the powerful features
+      Taskio has to offer, including:
+    </p>
+    <ul>
+      <li>Task Creation.</li>
+      <li>Task Organization.</li>
+      <li>Prioritization</li>
+      <li>Due Dates and Reminders</li>
+      <li>And much more!</li>
+    </ul>
+    <p>
+      Your account security is our top priority. If you did not create an
+      account <%= email %> with Taskio, please disregard this email.
+    </p>
+    <p>Thank you for choosing Taskio. We're excited to have you on board!</p>
+    <p>Best regards,</p>
+    <p>The Taskio Team.</p>
+    <img
+      src="https://i.ibb.co/PrTndDT/Taskio-Logo.jpg"
+      alt="Taskio-Logo"
+      width="150"
+    />
+  </body>
+</html>

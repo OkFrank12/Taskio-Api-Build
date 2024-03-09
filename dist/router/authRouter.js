@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const authController_1 = require("../controller/authController");
+const authRoute = (0, express_1.Router)();
+authRoute.post("/create-account", authController_1.createTaskioAccount);
+authRoute.get("/:token/verify-account", authController_1.verifyTaskioAccount);
+authRoute.post("/sign-in-account", authController_1.signIntoTaskioAccount);
+authRoute.get("/:_id/view-one-taskio-account", authController_1.viewOneTaskioAccount);
+authRoute.get("/view-all-account", authController_1.viewAllTaskioAccount);
+exports.default = authRoute;

@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const taskController_1 = require("../controller/taskController");
+const taskRoute = (0, express_1.Router)();
+taskRoute.post("/:_id/create-your-task", taskController_1.createTaskControl);
+taskRoute.patch("/:_id/:task_id/edit-your-task", taskController_1.editTaskControl);
+taskRoute.patch("/:_id/:task_id/move-to-trash", taskController_1.moveTaskToTrash);
+taskRoute.get("/:_id/view-your-task", taskController_1.viewTaskionsTaskControl);
+taskRoute.patch("/:_id/:task_id/move-to-all-task", taskController_1.moveToAllTask);
+taskRoute.get(`/:_id/view-trashed-task`, taskController_1.viewTrashedTask);
+taskRoute.delete("/:_id/:task_id/delete-trashed-task", taskController_1.deleteTrashedTask);
+exports.default = taskRoute;
