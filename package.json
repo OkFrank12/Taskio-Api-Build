@@ -4,7 +4,8 @@
   "description": "I want to build a task management api for Taskio",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node-dev --respawn index.ts"
+    "dev": "ts-node-dev --respawn index.ts",
+    "start": "node ./dist/index.js"
   },
   "author": "Okoro Franklin Chidera",
   "license": "MIT",
